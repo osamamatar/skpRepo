@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+public class SecurityConfig extends WebSecurityConfigurerAdapter  {
 
 
     @Autowired
@@ -23,8 +23,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
         auth.jdbcAuthentication().passwordEncoder(new BCryptPasswordEncoder())
                 .dataSource(dataSource)
-                .usersByUsernameQuery("select user_name, password from admin where user_name=?")
-                .authoritiesByUsernameQuery("select user_name, role_name from admin_roles where user_name=?")
+                .usersByUsernameQuery("select user_name,password,enabled  from admin where user_name=?")
+                .authoritiesByUsernameQuery("select user_name,role_name from admin_roles where user_name=?")
         ;
     }
 
@@ -33,7 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/admin/**").hasRole("ADMIN")
                 .antMatchers("/").permitAll().and().formLogin();
     }
 }

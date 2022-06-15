@@ -10,7 +10,7 @@ import java.util.Collection;
 public interface BaseController <T, ID>{
 
     @GetMapping
-    ResponseEntity<Page<T>> findAll(@RequestParam(required = false, defaultValue = "0") Integer page,
+    ResponseEntity<Page<?>> findAll(@RequestParam(required = false, defaultValue = "0") Integer page,
                                     @RequestParam(required = false, defaultValue = "20") Integer size);
 
     @GetMapping("/{id}")
@@ -25,6 +25,6 @@ public interface BaseController <T, ID>{
 
 
     @DeleteMapping
-    ResponseEntity<?> deleteAll(@RequestParam("ids") Collection<String> ids);
+    ResponseEntity<?> deleteAll(@RequestParam("ids") Collection<ID> ids);
 
 }

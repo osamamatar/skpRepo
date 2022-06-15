@@ -1,6 +1,7 @@
-package com.oma.b2b.util;
+package com.osama.skp.util;
 
-import com.oma.b2b.dto.MessageRequest;
+
+import com.osama.skp.dto.MessageRequest;
 import org.springframework.stereotype.Component;
 
 

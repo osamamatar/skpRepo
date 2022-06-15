@@ -1,4 +1,4 @@
-package com.oma.b2b.dto;
+package com.osama.skp.dto;
 
 import lombok.Data;
 

@@ -1,14 +1,12 @@
-package com.osama.skp.service.order;
+package com.osama.skp.service;
 
 import org.springframework.data.domain.Page;
-
 import java.util.Collection;
 
-public interface BaseService<T, ID>  {
-
+public interface BaseService<T, ID> {
     T findById(ID id);
-    Page<T> findAll(Integer page, Integer size);
-    T save(T t, String token);
-    void deleteById(ID id, String token);
-    void deleteAll(Collection<String> ids, String token);
+    Page<?> findAll(Integer page, Integer size);
+    T save(T t);
+    void deleteById(ID id);
+    void deleteAll(Collection<ID> ids);
 }
