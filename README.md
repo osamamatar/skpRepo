@@ -1,5 +1,6 @@
 # skpRepo
-this is java backend assissment for simon kusher company
+this is java backend assissment for simon kusher company.
+this just demo not for production purposes.
 
 ### Built With
 
@@ -38,8 +39,6 @@ This is software must be installed on your machine before you run this app.
 4. Enter database connection uri `applecation.properties`
 5. Enter your Email and email password in  `applecation.properties`
 6. Enter your Paypal acount configration in  `applecation.properties`
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+7. explore  endpoints in swagger  http://localhost:8091/swagger-ui.html
 
 
