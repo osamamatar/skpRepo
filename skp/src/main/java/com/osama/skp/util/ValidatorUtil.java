@@ -6,4 +6,9 @@ public class ValidatorUtil {
         //validation business
         return true;
     }
+
+    public static Boolean isValidEmailr(String mail){
+        //validation business
+        return true;
+    }
 }

@@ -1,4 +1,4 @@
-package com.osama.skp.dto;
+package com.osama.skp.utilityClasses.dto;
 
 import lombok.Getter;
 import lombok.Setter;

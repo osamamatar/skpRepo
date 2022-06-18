@@ -4,6 +4,9 @@ import com.osama.skp.domain.CustomerOrder;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Collection;
+
 @Repository
-public interface CustomerOrderRepository extends JpaRepository<CustomerOrder,Long> {
+public interface OrderRepository extends JpaRepository<CustomerOrder,Long> {
+    void deleteAllByIdIn(Collection<Long> ids);
 }

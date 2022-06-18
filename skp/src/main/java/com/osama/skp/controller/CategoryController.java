@@ -1,6 +1,6 @@
 package com.osama.skp.controller;
 
-import com.osama.skp.dto.CategoryDto;
+import com.osama.skp.utilityClasses.dto.CategoryDto;
 import com.osama.skp.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 
 @RestController
-@RequestMapping("category")
+@RequestMapping("customer/category")
 public class CategoryController implements BaseController<CategoryDto,Long> {
     @Autowired
     private CategoryService categoryService;

@@ -1,4 +1,4 @@
-package com.osama.skp.dto;
+package com.osama.skp.utilityClasses.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;

@@ -2,7 +2,7 @@ package com.osama.skp.service;
 
 import com.osama.skp.dao.ProductRepository;
 import com.osama.skp.domain.Product;
-import com.osama.skp.dto.ProductDto;
+import com.osama.skp.utilityClasses.dto.ProductDto;
 import com.osama.skp.exceptions.AbstractEntityNotFound;
 import com.osama.skp.exceptions.AbstractGlopalException;
 import com.osama.skp.util.MapperUtil;

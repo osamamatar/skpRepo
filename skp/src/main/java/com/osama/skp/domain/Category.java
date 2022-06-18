@@ -24,7 +24,7 @@ public class Category {
     @Column(name = "last_update")
      private Date lastUpdate;
 
-    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
     @JoinColumn(name = "category_id")
     private List<Product> products;
 }

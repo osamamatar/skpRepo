@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("product")
+@RequestMapping("customer/product")
 public class CustomerProductController {
     @Autowired
     private ProductService productService;

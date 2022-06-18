@@ -1,18 +1,13 @@
-package com.osama.skp.dto;
+package com.osama.skp.utilityClasses.info;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.osama.skp.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
 import java.sql.Blob;
 import java.util.Date;
-
 @Setter@Getter
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ProductDto {
-
+public class ProductInfo {
     private Long id;
     @NotBlank(message="description must be not null")
     private String description;
@@ -21,6 +16,5 @@ public class ProductDto {
     private Date lastUpdate;
     private Double price;
     private Integer quantity;
-    private Long categoryId;
 
 }

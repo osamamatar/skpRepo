@@ -32,7 +32,7 @@ public class CustomerOrder {
     private Double orderAmount;
 
     @NotNull(message = "customer must be not empty")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "customer_id")
     private Customer customer;
 

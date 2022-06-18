@@ -1,6 +1,8 @@
 package com.osama.skp.domain;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
@@ -10,7 +12,8 @@ import javax.persistence.*;
 @Setter
 @Getter
 @IdClass(RoleId.class)
-public class AdminRoles {
+@AllArgsConstructor@NoArgsConstructor
+public class AdminRole {
 
     @Id
     @Column(name = "user_name")

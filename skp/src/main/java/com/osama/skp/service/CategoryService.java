@@ -2,9 +2,7 @@ package com.osama.skp.service;
 
 import com.osama.skp.dao.CategoryRepository;
 import com.osama.skp.domain.Category;
-import com.osama.skp.domain.Product;
-import com.osama.skp.dto.CategoryDto;
-import com.osama.skp.dto.ProductDto;
+import com.osama.skp.utilityClasses.dto.CategoryDto;
 import com.osama.skp.exceptions.AbstractEntityNotFound;
 import com.osama.skp.exceptions.AbstractGlopalException;
 import com.osama.skp.util.MapperUtil;
@@ -12,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Collection;
 
 @Service

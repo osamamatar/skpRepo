@@ -26,8 +26,9 @@ public class ExceptionControllerAdviceHandler {
     }
     @ExceptionHandler({Exception.class})
     protected ResponseEntity handleException(Exception e) {
+        e.printStackTrace();
         return ResponseEntity
                .internalServerError()
-                .body("Exception occur inside API " + e);
+                .body("Exception occur inside API " + e.getMessage());
     }
 }

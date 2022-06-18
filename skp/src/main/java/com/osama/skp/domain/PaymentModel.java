@@ -1,7 +1,5 @@
 package com.osama.skp.domain;
 
-import com.osama.skp.enums.PaymentStatus;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +11,7 @@ import java.util.Date;
 @Entity
 @Setter
 @Getter
-public class Payment {
+public class PaymentModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,14 +25,14 @@ public class Payment {
     private Date paymentDate;
 
     @Column(name = "payment_status")
-    private PaymentStatus paymentStatus;
+    private String paymentStatus;
 
     @NotNull(message = "transactionId must be not empty")
     @Column(name = "transaction_id")
     private String transactionId;
 
     @NotNull(message = "customerOrder must be not empty")
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_order_id")
     private CustomerOrder customerOrder;
 
