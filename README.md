@@ -5,12 +5,12 @@ this just demo not for production purposes.
 ### Built With
 
 * [Spring Boot](https://spring.io/)
-* [MYSQL](https://www.mysql.com/)
-* [spring data jpa](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
-* [lombok](https://projectlombok.org/)
-* [POI](https://poi.apache.org/)
-* JAVA 8
-* JAVA MAIL
+* [MySql](https://www.mysql.com/)
+* [Spring Data Jpa](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/)
+* [Lombok](https://projectlombok.org/)
+* [Poi](https://poi.apache.org/)
+* Java 8
+* Java Mail
 
 <!-- GETTING STARTED -->
 ### Getting Started
