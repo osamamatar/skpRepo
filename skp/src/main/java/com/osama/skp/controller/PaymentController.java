@@ -25,11 +25,9 @@ public class PaymentController {
     @Autowired
     private PaymentService paymentService;
 
-
     public static final String SUCCESS_URL = "payment/pay/success";
     public static final String CANCEL_URL = "payment/pay/cancel";
-    public static final String BASE_URL = "http://localhost:8091/skp/";
-
+    public static final String BASE_URL = "http://localhost:8091/";
 
     @GetMapping ("/checkout/{orderId}")
     public String payment(@PathVariable Long orderId) {
@@ -47,7 +45,6 @@ public class PaymentController {
             throw new AbstractGlopalException(e.getMessage());
         }
         throw new AbstractGlopalException("payment operation failed");
-
     }
 
     @GetMapping(value = CANCEL_URL)
@@ -70,6 +67,4 @@ public class PaymentController {
         }
         throw new AbstractGlopalException("payment operation failed");
     }
-
-
 }
